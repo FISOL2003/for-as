@@ -7,7 +7,7 @@ on:
 
 jobs:
   build-deploy:
-    name: Build and Deploy CI
+    name: Build project
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
