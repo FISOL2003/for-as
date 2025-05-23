@@ -1,9 +1,7 @@
-FROM openjdk:17-jdk
+FROM openjdk:17
 
-WORKDIR /app
+COPY ./out/production/DockerHelloWorld/ /tmp
 
-COPY target/myproject.jar /app/myproject.jar
+WORKDIR /tmp
 
-EXPOSE 8080
-
-CMD ["java", "-jar", "myproject.jar"]
+ENTRYPOINT ["java","HelloWorld"]
