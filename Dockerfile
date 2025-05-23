@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk
 
-WORKDIR /appu
+WORKDIR /app
 
 EXPOSE 8080
 
