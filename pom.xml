@@ -66,6 +66,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>java-as-myproject</finalName>
     </build>
 
     <dependencies>
