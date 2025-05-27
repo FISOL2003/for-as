@@ -1,5 +1,5 @@
 FROM eclipse-temurin:17-jdk-alpine
 WORKDIR /app
-COPY target/springboot-example.jar springboot-example.jar
+COPY target/myproject-1.0-SNAPSHOT.jar java-as-myproject.jar
 EXPOSE 8080
-CMD ["java","-jar","springboot-example.jar"]
+CMD ["java","-jar","myproject-1.0-SNAPSHOT.jar"]
