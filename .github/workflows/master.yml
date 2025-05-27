@@ -36,7 +36,7 @@ jobs:
 
   deploy:
     needs: build
-    runs-on: [self-hosted]
+    runs-on: [aws-ec2]
     steps:
       - name: Pull Image from docker hub
         run: docker pull fisolnasiet/java-as-myproject:latest
