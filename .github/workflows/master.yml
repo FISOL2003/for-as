@@ -39,8 +39,5 @@ jobs:
         
       - name: Run docker container
         run: docker run -d -p 8080:8080 --name java-as-myproject-container fisolnasiet/java-as-myproject  
-      
-  deploy:
-    needs: build
-    runs-on: [ews-ec2]
+    
      
