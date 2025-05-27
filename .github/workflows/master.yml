@@ -42,7 +42,7 @@ jobs:
         run: docker pull fisolnasiet/java-as-myproject:latest
         
       - name: Delete old container
-        run: docker rm -f springboot-example-container
+        run: docker rm -f java-as-myproject-container
         
       - name: Run docker container
         run: docker run -d -p 8080:8080 --name java-as-myproject-container fisolnasiet/java-as-myproject
