@@ -42,8 +42,8 @@ jobs:
     runs-on: [ aws-ec2 ]
     steps:
       - name: Pull Image from docker hub
-        run: docker pull fisolnasiet/java-as-myproject:latest
+        run: docker pull fisolnasiet/java-as-myproject:today
       - name: Delete old container
-        run: docker rm -f java-as-myproject
+        run: docker rm -f java-as-myproject-container
       - name: Run docker container
-        run: docker run -d -p 8080:8080 --name java-as-myproject fisolnasiet/java-as-myproject
+        run: docker run -d -p 8080:8080 --name java-as-myproject-container fisolnasiet/java-as-myproject
