@@ -6,7 +6,7 @@ on:
       - master
 
 jobs:
-  build-deploy:
+  build:
     name: Build project
     runs-on: ubuntu-latest
     steps:
@@ -37,3 +37,13 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
+  deploy:
+    needs: build
+    runs-on: [ aws-ec2 ]
+    steps:
+      - name: Pull Image from docker hub
+        run: docker pull fisolnasiet/java-as-myproject:latest
+      - name: Delete old container
+        run: docker rm -f java-as-myproject
+      - name: Run docker container
+        run: docker run -d -p 8080:8080 --name java-as-myproject fisolnasiet/java-as-myproject
